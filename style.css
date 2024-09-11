@@ -1,7 +1,6 @@
 .detalii-nume{
         list-style-type: none;
-        position: absolute;
-        top: 50px;
-        left: 20px;
+        margin-top: 50px;
+        margin-left: 20px;
         
 }

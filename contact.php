@@ -65,7 +65,7 @@
                     </form>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12" style="position: relative;">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="detalii-nume">
                         <h2>Ditu Iulian</h2>
                         <li style="background-color: white;"><span class="fw-bold">E-mail: </span>dituiulian@gmail.com</li>
