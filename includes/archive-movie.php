@@ -1,6 +1,6 @@
  <?php
-    // PHP movie counter
 
+    // PHP movies loop
     foreach ($movies as $movie) {
     ?>
      <!-- HTML Movie Card -->

@@ -5,7 +5,8 @@
 
 <body>
     <div class="container">
-        <?php require './includes/nav-bar.php'; ?>
+        <?php require './includes/nav-bar.php';
+        ?>
 
         <div class="container py-3">
             <div class="row">
@@ -20,9 +21,7 @@
 
                     <div>
                         <div><strong>Runtime: </strong>
-                            <?php
-
-                            ?>
+                            <?php echo runtimePrettier(142); ?>
                         </div>
                         <div><strong>Genre: </strong>
                             <div class="badge bg-primary text-wrap"> Epic</div>

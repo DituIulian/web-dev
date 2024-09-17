@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <?php
-// PHP movie list 
+
+// PHP movie list
 $movies = array(
     array(
         'title' => 'Shawshank Redemption',
@@ -18,7 +19,7 @@ $movies = array(
                             century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.',
         'permalink' => './movie1.php',
         'id' => '1',
-        'runtime' => '142'
+        'runtime' => 142
     ),
     array(
         'title' => 'John Wick',
@@ -27,7 +28,7 @@ $movies = array(
         'description' => 'An ex-hitman comes out of retirement to track down the gangsters who killed his dog and stole his car.',
         'permalink' => './movie2.php',
         'id' => '2',
-        'runtime' => '101'
+        'runtime' => 101
     ),
     array(
         'title' => 'Interstellar',
@@ -37,10 +38,28 @@ $movies = array(
                             spacecraft, along with a team of researchers, to find a new planet for humans.',
         'permalink' => './movie3.php',
         'id' => '3',
-        'runtime' => '169'
+        'runtime' => 169
     ),
 
 );
 
-include './includes/functions.php'
+include './includes/functions.php';
+
+// PHP nav bar elements
+$navElements = array(
+    array(
+        'title' => 'Home',
+        'link' => '/demo-php/index.php'
+    ),
+    array(
+        'title' => 'Contact',
+        'link' => '/demo-php/contact.php'
+    ),
+    array(
+        'title' => 'Movies',
+        'link' => '/demo-php/movies.php'
+    )
+
+
+)
 ?>

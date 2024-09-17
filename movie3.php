@@ -20,7 +20,9 @@
                     <h1>Interstellar</h1>
 
                     <div>
-                        <div><strong>Runtime: </strong> 2h 49m</div>
+                        <div><strong>Runtime: </strong>
+                            <?php echo runtimePrettier(169); ?>
+                        </div>
                         <div><strong>Genre: </strong>
                             <div class="badge bg-primary"> Adventure Epic</div>
                             <div class="badge bg-primary"> Quest</div>
