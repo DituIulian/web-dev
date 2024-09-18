@@ -23,6 +23,9 @@
                         <div><strong>Runtime: </strong>
                             <?php echo runtimePrettier(169); ?>
                         </div>
+                        <div><strong> Release Date: </strong>
+                            <?php echo check_old_movie(1994) ?>
+                        </div>
                         <div><strong>Genre: </strong>
                             <div class="badge bg-primary"> Adventure Epic</div>
                             <div class="badge bg-primary"> Quest</div>

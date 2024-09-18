@@ -1,28 +1,28 @@
+
 .detalii-nume{
         list-style-type: none;
         margin-top: 50px;
         margin-left: 20px;
         
 }
-
 .nav-link{
         color: whitesmoke;
         margin-right: 8px;
-
 }
-
- .search-form{
-       margin-right: 8px;
-
-       
-} 
-
+.nav-link:hover {
+        color: rgb(230, 94, 94);
+        margin-right: 8px;
+        font-size: 110%;
+}
 .nav-link.active {
         font-weight: bold;
         color: green;
-
 }
+ .search-form{
+       margin-right: 8px;     
+} 
 
 .img-search{
         width: 25px;
 }
+

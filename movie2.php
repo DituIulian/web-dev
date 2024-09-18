@@ -23,7 +23,9 @@
                             <?php
                             echo runtimePrettier(101);
                             ?>
-
+                            <div><strong> Release Date: </strong>
+                                <?php echo check_old_movie(2014) ?>
+                            </div>
                             <div><strong>Genre: </strong>
                                 <div class="badge bg-primary text-wrap"> Gun Fu</div>
                                 <div class="badge bg-primary text-wrap"> One-Person Army Action</div>

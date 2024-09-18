@@ -1,6 +1,6 @@
 <?php
 // PHP store URL in a $
-$currentUrl = $_SERVER['REQUEST_URI'];
+$currentUrl = $_SERVER['PHP_SELF'];
 ?>
 
 <nav class="navbar navbar-expand navbar-dark bg-dark ">

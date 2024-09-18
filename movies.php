@@ -5,17 +5,20 @@
 
 <body>
 
-    <div class="container">
+    <div class="container ">
         <?php require './includes/nav-bar.php'; ?>
-
-        <div class="container mt-3">
-            <div class="row">
-                <?php require './includes/archive-movie.php'; ?>
-
-            </div>
+        <div class="row">
+            <!-- PHP movies loop -->
+            <?php foreach ($movies as $movie) { ?>
+                <div class="col-md-4 mb-3 mt-3 movie-card" id="<?php echo $movie['id']; ?>">
+                    <?php require './includes/archive-movie.php'; ?>
+                </div>
+            <?php } ?>
         </div>
 
+
         <?php require './includes/footer.php'; ?>
+    </div>
 </body>
 
 </html>

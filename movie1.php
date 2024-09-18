@@ -17,11 +17,14 @@
                 </div>
 
                 <div class="col-lg-9 col-md-9">
-                    <h1>Shawshank Redemption</h1>
+                    <h1>Shawshank Redemption</h1>imperativ
 
                     <div>
                         <div><strong>Runtime: </strong>
                             <?php echo runtimePrettier(142); ?>
+                        </div>
+                        <div><strong> Release Date: </strong>
+                            <?php echo check_old_movie(1994) ?>
                         </div>
                         <div><strong>Genre: </strong>
                             <div class="badge bg-primary text-wrap"> Epic</div>
