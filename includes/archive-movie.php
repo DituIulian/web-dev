@@ -1,13 +1,13 @@
 <!-- HTML Movie Card -->
 
 <div class="card">
-    <img class=" card-img-top img-thumbnail " src="<?php echo $movie['poster']; ?>" alt="<?php echo $movie['title']; ?>">
+    <img class=" card-img-top img-thumbnail " src="<?php echo $movie['posterUrl']; ?>" alt="<?php echo $movie['title']; ?>">
     <div class="card-body ">
         <h5 class="card-title"><?php echo $movie['title']; ?></h5>
-        <span class="card-subtitle text-primary"><?php echo $movie['genre']; ?></span>
-        <p class="card-text"><?php echo $movie['description'] . "..."; ?></p>
+        <span class="card-subtitle text-primary"><?php echo implode(", ", $movie['genres']); ?></span>
+        <p class="card-text"><?php echo $movie['plot'] . "..."; ?></p>
     </div>
     <div class="card-footer">
-        <a href="<?php echo $movie['permalink']; ?>"> <button class="btn btn-success">Read More </button></a>
+        <a href="<?php echo "movie.php" ?>"> <button class="btn btn-success">Read More </button></a>
     </div>
 </div>

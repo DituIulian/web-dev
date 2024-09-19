@@ -31,4 +31,4 @@ $currentUrl = $_SERVER['PHP_SELF'];
 </nav>
 
 <!-- Audio file for fun -->
-<audio id="audio" src="./audio/audio.mp3"></audio>
+<audio id="audio" src="./assets/audio/audio.mp3"></audio>
