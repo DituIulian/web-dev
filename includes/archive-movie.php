@@ -8,6 +8,6 @@
         <p class="card-text"><?php echo $movie['plot'] . "..."; ?></p>
     </div>
     <div class="card-footer">
-        <a href="<?php echo "movie.php" ?>"> <button class="btn btn-success">Read More </button></a>
+        <a href="movie.php?movie_id=<?php echo $movie['id']; ?>"> <button class="btn btn-success">Read More </button></a>
     </div>
 </div>

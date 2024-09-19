@@ -1,4 +1,3 @@
-  <form class="form-inline d-flex search-form ">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit"> <img class="img-search" src="https://cdn4.iconfinder.com/data/icons/movie-and-video-1/512/search-video-files-movie-searching-512.png" alt="Search"></button>
-  </form>
+ <form class="form mt-2" id="form_php" action="http://ditu-iulian.local/demo-php/movies.php" method="get">
+   <input placeholder="Search" type="text" name="FRAZA_DE_CAUTARE" value="" /> <input type="submit" value="Search" />
+ </form>

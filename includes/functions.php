@@ -11,9 +11,9 @@ function runtimePrettier($minute)
     $minuteRamase = $minute - ($ore * 60);
 
     if ($ore > 0) {
-        return "$ore hours $minuteRamase minutes";
+        return "<strong>Runtime:</strong> $ore hours $minuteRamase minutes";
     } else {
-        return "$minuteRamase minutes";
+        return "<strong>Runtime:</strong> $minuteRamase minutes";
     }
 }
 
@@ -21,10 +21,10 @@ function check_old_movie($release_date)
 {
     $today = date("Y");
     if ($today - $release_date >= 40) {
-        return  "<div class='badge bg-danger text-wrap'>Old movie: *" . $today - $release_date . " years ago*</div>"
+        return  "<p class='badge bg-danger text-wrap'>Old movie: *" . $today - $release_date . " years ago*</p>"
             // . $release_date
         ;
     } else {
-        return "<div class='badge bg-success text-wrap'>Good choice</div> " . $release_date;
+        return  "<p class='badge bg-success text-wrap'>Release date:</p> " . $release_date;
     }
 }
