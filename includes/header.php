@@ -11,12 +11,13 @@
 
 if ($_SERVER['PHP_SELF'] !== '/demo-php/index.php' && $_SERVER['PHP_SELF'] !== '/demo-php/contact.php') {
 
-
     // PHP/JSON movie list
     $movies =
         json_decode(file_get_contents('./assets/json/movies-list-db.json'), true)['movies'];
 }
+
 include './includes/functions.php';
+
 
 // PHP nav bar elements
 $navElements = array(
@@ -32,7 +33,5 @@ $navElements = array(
         'title' => 'Movies',
         'link' => '/demo-php/movies.php'
     )
-
-
 )
 ?>
