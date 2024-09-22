@@ -32,6 +32,10 @@ $navElements = array(
     array(
         'title' => 'Movies',
         'link' => '/demo-php/movies.php'
+    ),
+    array(
+        'title' => 'Genres',
+        'link' => '/demo-php/genres.php'
     )
 )
 ?>

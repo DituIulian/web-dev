@@ -1,5 +1,6 @@
 <!-- HTML Movie Card -->
 
+
 <div class="card">
     <img class=" card-img-top img-thumbnail " src="<?php echo $movie['posterUrl']; ?>" alt="<?php echo $movie['title']; ?>">
     <div class="card-body ">

@@ -1,3 +1,13 @@
+body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+}
+
+.site-footer{
+        margin-top: auto;
+       
+}
 
 .detalii-nume{
         list-style-type: none;
@@ -18,11 +28,11 @@
         font-weight: bold;
         color: green;
 }
- .search-form{
-       margin-right: 8px;     
-} 
 
-.img-search{
-        width: 25px;
+.butoane-genres{
+        font-size: larger;
+       
+        
 }
+
 
