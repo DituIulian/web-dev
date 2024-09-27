@@ -29,13 +29,13 @@
     <?php
 
 
-    if (strlen($frazaCautata) <= 2) {
+    if (strlen($frazaCautata) <= 2 && strlen($frazaCautata) != 0) {
         echo "You need to insert at least 3 chars";
     } else {
         $rezultate = array_filter($movies,  function ($movie) use ($frazaCautata) {
             return stripos($movie['title'], $frazaCautata) !== false;
         });
-        if (!empty($rezultate) && strlen($frazaCautata) != 0) {
+        if (!empty($rezultate)) {
             foreach ($rezultate as $rezultat) { ?>
                 <div class="row mt-2 border-bottom">
                     <div class="col-lg-3 col-md-6">

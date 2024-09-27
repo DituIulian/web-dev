@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php if (isset($_GET['movie_genre'])) {
-    $genulCautat = $_GET['movie_genre'];
-} ?>
-<title> <?PHP echo $genulCautat . " Movies"; ?></title>
+    $genulCautat = $_GET['movie_genre']; ?>
+    <title> <?PHP echo $genulCautat . " Movies"; ?></title>
+<?php  } ?>
 
 <?php require './includes/header.php'; ?>
 
