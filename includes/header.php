@@ -39,3 +39,4 @@ $navElements = array(
     )
 )
 ?>
+<div class="container main-container">
