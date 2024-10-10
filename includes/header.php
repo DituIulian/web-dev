@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +40,17 @@ $navElements = array(
         'title' => 'Genres',
         'link' => '/demo-php/genres.php'
     )
-)
+);
+
+if (isset($_POST['fav'])) {
+    $fav_movies =  json_decode($_COOKIE['fav_movies'], true);
+    if (!empty($fav_movies)) {
+        $navElements[] = array(
+            'title' => 'Favorites',
+            'link' => '/demo-php/movies.php?page=favorites'
+        );
+    }
+}
+
 ?>
 <div class="container main-container">

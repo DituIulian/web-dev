@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 $genres =  json_decode(file_get_contents('./assets/json/movies-list-db.json'), true)['genres'];    ?>
 <?php require './includes/header.php'; ?>

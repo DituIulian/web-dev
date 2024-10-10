@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php require './includes/header.php'; ?>
 
 <body>
