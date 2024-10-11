@@ -28,3 +28,9 @@ function check_old_movie($release_date)
         return  "<p class='badge bg-success text-wrap'>Release date:</p> " . $release_date;
     }
 }
+
+
+function dbConnect($host = 'localhost', $username = 'php-user', $password = 'php-password', $dbname = 'php-proiect')
+{
+    return mysqli_connect($host, $username, $password, $dbname);
+}

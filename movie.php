@@ -96,7 +96,13 @@
                 </ul>
                 </p>
                 <p><strong>Description:</strong> <?php echo ($selectedMovie['plot']); ?></p>
+
+                <?php
+                include './includes/favorites-form.php';
+                ?>
             </div>
+        </div>
+
         </div>
 
     <?php } else { ?>
