@@ -98,7 +98,8 @@
                 <p><strong>Description:</strong> <?php echo ($selectedMovie['plot']); ?></p>
 
                 <?php
-                include './includes/favorites-form.php';
+
+                include './includes/comment-form.php';
                 ?>
             </div>
         </div>

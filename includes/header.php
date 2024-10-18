@@ -19,7 +19,7 @@ if ($_SERVER['PHP_SELF'] !== '/demo-php/index.php' && $_SERVER['PHP_SELF'] !== '
         json_decode(file_get_contents('./assets/json/movies-list-db.json'), true)['movies'];
 }
 
-include './includes/functions.php';
+require_once './includes/functions.php';
 
 
 // PHP nav bar elements
