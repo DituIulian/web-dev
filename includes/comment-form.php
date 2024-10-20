@@ -1,51 +1,56 @@
-<div class="container">
-    <h2>Lasa un comentariu</h2>
-    <p><span class="text-danger">* Campuri obligatorii</span></p>
+<?php
+require_once './includes/functions.php';
 
-    <form method="post" action="" class="needs-validation" novalidate>
-        <div class="mb-3">
-            <label for="nume" class="form-label">Nume <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="nume" name="nume" required>
-        </div>
+$connection = dbConnect();
 
-        <div class="mb-3">
-            <label for="email" class="form-label">E-mail <span class="text-danger">*</span></label>
-            <input type="email" class="form-control" id="email" name="email" required>
-        </div>
 
-        <div class="mb-3">
-            <label for="comment" class="form-label">Comentariu</label>
-            <textarea class="form-control" id="comment" name="comment" rows="5" required></textarea>
-        </div>
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['checkbox_name'])) {
+    $autor = $_POST['autor'];
+    $email = $_POST['email'];
+    $comentariu = $_POST['comentariu'];
+    $id_film = $_GET['movie_id'];
 
-        <div class="mb-3">
-            <label class="form-label">Sunt de acord cu procesarea datelor cu caracter personal <span class="text-danger">*</span></label>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="gdpr" id="gdprDa" value="Da" required>
-                <label class="form-check-label" for="gdprDa">Da</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="gdpr" id="gdprNu" value="Nu" required>
-                <label class="form-check-label" for="gdprNu">Nu</label>
-            </div>
-        </div>
 
-        <button type="submit" name="submit" class="btn btn-primary">Trimite</button>
-    </form>
+    if (!empty($autor) && !empty($comentariu)) {
 
-    <!-- <h3>Comentarii</h3>
-    <?php if ($result->num_rows > 0): ?>
-        <ul class="list-unstyled">
-            <?php while ($row = $result->fetch_assoc()): ?>
-                <li>
-                    <strong><?php echo htmlspecialchars($row['name']); ?></strong>
-                    <p><?php echo htmlspecialchars($row['comment']); ?></p>
-                    <small>Comentariul a fost postat pe <?php echo htmlspecialchars($row['created_at']); ?></small>
-                </li>
-            <?php endwhile; ?>
-        </ul>
-    <?php else: ?>
-        <p>Nu sunt comentarii pentru acest film.</p>
-    <?php endif; ?> -->
+        $sql_insert = "INSERT INTO reviews (id_film, autor, email, comentariu) VALUES (?, ?, ?, ?)";
+        if ($stmt = mysqli_prepare($connection, $sql_insert)) {
+            mysqli_stmt_bind_param($stmt, "isss", $id_film, $autor, $email, $comentariu);
 
-</div>
+            if (mysqli_stmt_execute($stmt)) {
+
+                echo '<div class="alert alert-success" role="alert">
+                        Formularul a fost transmis cu succes!
+                      </div>';
+
+                $show_form = false;
+            } else {
+                echo "Eroare la inserarea în baza de date: " . mysqli_error($connection);
+            }
+
+            mysqli_stmt_close($stmt);
+        }
+    } else {
+        echo '<div class="alert alert-danger" role="alert">
+                Te rugăm să completezi toate câmpurile obligatorii.
+              </div>';
+    }
+}
+
+
+if (!isset($show_form) || $show_form !== false) {
+?>
+    <div class="container d-flex">
+        <form method="POST" action="">
+            <input type="hidden" name="id_film" value="<?php echo $id_film; ?>">
+            <input type="text" name="autor" placeholder="Numele tău" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <textarea name="comentariu" placeholder="Comentariul tău" required></textarea>
+            <input type="checkbox" name="checkbox_name" required>
+            <label for="checkbox_name">Sunt de acord cu procesarea datelor cu caracter personal.</label><br>
+            <button type="submit">Trimite review</button>
+        </form>
+    </div>
+<?php
+}
+?>

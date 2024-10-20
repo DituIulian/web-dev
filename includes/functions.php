@@ -21,9 +21,7 @@ function check_old_movie($release_date)
 {
     $today = date("Y");
     if ($today - $release_date >= 40) {
-        return   "<p class='badge bg-danger text-wrap'>" . $release_date . " Old movie: *" . $today - $release_date . " years ago*</p>"
-            // . $release_date
-        ;
+        return   "<p class='badge bg-danger text-wrap'>" . $release_date . " Old movie: *" . ($today - $release_date) . " years ago*</p>";
     } else {
         return  "<p class='badge bg-success text-wrap'>Release date:</p> " . $release_date;
     }
