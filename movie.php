@@ -98,49 +98,19 @@
                 <p><strong>Description:</strong> <?php echo ($selectedMovie['plot']); ?></p>
 
                 <?php
-                include './includes/comment-form.php';
-                include './baza-de-date.php';
+                include './includes/movie-review.php';
 
-
-                // Afișăm toate review-urile pentru filmul curent
-                $id_film = $_GET['movie_id'];  // ID-ul filmului din URL sau altă sursă
-                $sql_select_reviews = "SELECT autor, comentariu, data FROM reviews WHERE id_film = ? ORDER BY data DESC limit 5";
-
-                if ($stmt = mysqli_prepare($connection, $sql_select_reviews)) {
-                    mysqli_stmt_bind_param($stmt, "i", $id_film);
-                    mysqli_stmt_execute($stmt);
-                    $result = mysqli_stmt_get_result($stmt);
-
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<div class='review'>";
-                            echo "<strong>" . $row['autor'] . "</strong><br>";
-                            echo "<p>" . $row['comentariu'] . "</p>";
-                            echo "<small>Data: " . $row['data'] . "</small>";
-                            echo "</div><hr>";
-                        }
-                    } else {
-                        echo "<p>Nu exista inca review-uri pentru acest film.</p>";
-                    }
-
-                    mysqli_stmt_close($stmt);
-                }
                 ?>
 
 
             </div>
         </div>
 
-        </div>
 
     <?php } else { ?>
         <p>Filmul nu a fost găsit.</p>
         <a href=" movies.php"><button class="btn btn-success">Go back</button></a>
     <?php } ?>
-
-
-
-
 
 
     <?php require './includes/footer.php'; ?>

@@ -28,7 +28,7 @@ function check_old_movie($release_date)
 }
 
 
-function dbConnect($host = 'localhost', $username = 'php-user', $password = 'php-password', $dbname = 'php-proiect')
+function db_connect($host = 'localhost', $username = 'php-user', $password = 'php-password', $dbname = 'php-proiect')
 {
     return mysqli_connect($host, $username, $password, $dbname);
 }
